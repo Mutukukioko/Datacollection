@@ -1,0 +1,35 @@
+Python list structure, which is a good data type for general data manipulation, but not optimized for numeric analysis. 
+For that, we're going to use the NumPy package, which includes specific data types and functions for working with Numbers in Python.
+The key takeaway from this is that NumPy arrays are specifically designed to support mathematical operations on numeric data - which makes them more useful for data analysis than a generic list.
+
+While NumPy provides a lot of the functionality you need to work with numbers, and specifically arrays of numeric values;
+when you start to deal with two-dimensional tables of data, the Pandas package offers a more convenient structure to work with - the DataFrame.
+
+
+You can use the loc method to find indexed rows based on a filtering expression that references named columns other than the index, like this:
+  df_students.loc[df_students['Name']=='Aisha']
+  
+  The DataFrame's read_csv method is used to load data from text files. 
+  
+As you can see in the example code, you can specify options such as the column delimiter and which row (if any) contains column headers (in this case, the delimiter is a comma and the first row contains the column names - these are the default settings, so the parameters could have been omitted).
+
+Handling missing values
+One of the most common issues data scientists need to deal with is incomplete or missing data. So how would we know that the DataFrame contains missing values? You can use the isnull method to identify which individual values are null, like this:
+
+
+use the fillna method, approach is to impute replacement values
+
+ you can drop rows or columns that contains null values by using the dropna method.
+ 
+ 
+ Visualizing data with Matplotlib
+DataFrames provide a great way to explore and analyze tabular data, but sometimes a picture is worth a thousand rows and columns. The Matplotlib library provides the foundation for plotting data visualizations that can greatly enhance your ability to analyze the data.
+
+
+Note that you used the pyplot class from Matplotlib to plot the chart. This class provides a whole bunch of ways to improve the visual elements of the plot. For example, the following code:
+
+Specifies the color of the bar chart.
+Adds a title to the chart (so we know what it represents)
+Adds labels to the X and Y (so we know which axis shows which data)
+Adds a grid (to make it easier to determine the values for the bars)
+Rotates the X markers (so we can read them)
